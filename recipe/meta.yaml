@@ -1,8 +1,8 @@
 {% set name = "kafka-python" %}
-{% set version = "1.4.2" %}
+{% set version = "1.4.3" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "6a5c516f540f4b13b78c64a85dd42dc38fe29257e2fae6393fc5daff9106389b" %}
+{% set hash = "078acdcd1fc6eddacc46d437c664998b4cf7613b7e79ced66a460965f2648f88" %}
 
 package:
   name: {{ name|lower }}
