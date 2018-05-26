@@ -14,12 +14,15 @@ Summary: Pure Python client for Apache Kafka
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/kafka-python-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/kafka-python-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/kafka-python-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/kafka-python-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/kafka-python/badges/version.svg)](https://anaconda.org/conda-forge/kafka-python)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/kafka-python/badges/downloads.svg)](https://anaconda.org/conda-forge/kafka-python)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-kafka--python-green.svg)](https://anaconda.org/conda-forge/kafka-python) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/kafka-python.svg)](https://anaconda.org/conda-forge/kafka-python) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/kafka-python.svg)](https://anaconda.org/conda-forge/kafka-python) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/kafka-python.svg)](https://anaconda.org/conda-forge/kafka-python) |
 
 Installing kafka-python
 =======================
