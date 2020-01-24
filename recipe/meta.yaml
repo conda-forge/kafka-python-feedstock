@@ -1,17 +1,12 @@
-{% set name = "kafka-python" %}
 {% set version = "1.4.7" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "2f29baad4b3efe05a2bb81ac268855aa01cbc68397f15bac77b494ffd7e2cada" %}
 
 package:
-  name: {{ name|lower }}
+  name: kafka-python
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.org/packages/source/k/kafka-python/kafka-python-{{ version }}.tar.gz
+  sha256: 2f29baad4b3efe05a2bb81ac268855aa01cbc68397f15bac77b494ffd7e2cada
 
 build:
   noarch: python
@@ -22,7 +17,6 @@ requirements:
   build:
     - python
     - pip
-
   run:
     - python
 
@@ -43,7 +37,7 @@ test:
 about:
   home: https://github.com/dpkp/kafka-python
   license_file: LICENSE
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   summary: 'Pure Python client for Apache Kafka'
   dev_url: https://github.com/dpkp/kafka-python
