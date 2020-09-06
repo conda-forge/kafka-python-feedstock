@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: kafka-python
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/k/kafka-python/kafka-python-{{ version }}.tar.gz
-  sha256: 111a90e54a56182b6b7c4818ee58f984cc427ad8f85fdff59faf45aaeacb51ea
+  sha256: e59ad42dec8c7d54e3fbba0c1f8b54c44d92a3392d88242962d0c29803f2f6f8
 
 build:
   noarch: python
@@ -39,7 +39,7 @@ about:
   license_file: LICENSE
   license: Apache-2.0
   license_family: Apache
-  summary: 'Pure Python client for Apache Kafka'
+  summary: Pure Python client for Apache Kafka
   dev_url: https://github.com/dpkp/kafka-python
   doc_url: https://kafka-python.readthedocs.io/en/master/
 
