@@ -1,4 +1,4 @@
-{% set version = "1.4.7" %}
+{% set version = "2.0.0" %}
 
 package:
   name: kafka-python
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/k/kafka-python/kafka-python-{{ version }}.tar.gz
-  sha256: 2f29baad4b3efe05a2bb81ac268855aa01cbc68397f15bac77b494ffd7e2cada
+  sha256: 111a90e54a56182b6b7c4818ee58f984cc427ad8f85fdff59faf45aaeacb51ea
 
 build:
   noarch: python
@@ -14,7 +14,7 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
@@ -46,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - synapticarbors
