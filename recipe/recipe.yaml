@@ -1,0 +1,56 @@
+schema_version: 1
+
+context:
+  version: 2.2.16
+
+package:
+  name: kafka-python
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/k/kafka-python/kafka_python-${{ version }}.tar.gz
+  sha256: abbb2e5b9f7ecb85fd0caa7955ee6cbb1c8257021a94819cd63e0603e82c8dc1
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=61.2
+    - pip
+  run:
+    - python >=${{ python_min }}
+
+tests:
+  - python:
+      imports:
+        - kafka
+        - kafka.consumer
+        - kafka.coordinator
+        - kafka.coordinator.assignors
+        - kafka.metrics
+        - kafka.metrics.stats
+        - kafka.partitioner
+        - kafka.producer
+        - kafka.protocol
+        - kafka.serializer
+        - kafka.vendor
+      pip_check: true
+      python_version: ${{ python_min }}.*
+
+about:
+  license_file: LICENSE
+  license: Apache-2.0
+  summary: Pure Python client for Apache Kafka
+  homepage: https://github.com/dpkp/kafka-python
+  repository: https://github.com/dpkp/kafka-python
+  documentation: https://kafka-python.readthedocs.io/en/master/
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
+    - synapticarbors
+
