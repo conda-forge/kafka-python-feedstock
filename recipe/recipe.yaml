@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: 2.2.16
+  version: "2.2.18"
 
 package:
   name: kafka-python
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/k/kafka-python/kafka_python-${{ version }}.tar.gz
-  sha256: abbb2e5b9f7ecb85fd0caa7955ee6cbb1c8257021a94819cd63e0603e82c8dc1
+  sha256: 2187ed6a31a0447b8e41cd431d46d8f04e5d8f6af6ff4dd11bea7058d9eb0c30
 
 build:
   number: 0
