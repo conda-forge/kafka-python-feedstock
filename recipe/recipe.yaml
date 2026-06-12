@@ -15,11 +15,14 @@ build:
   number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
+  python:
+    entry_points:
+      - kafka-python=kafka.cli:run_cli
 
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools >=61.2
+    - setuptools >=77.0
     - pip
   run:
     - python >=${{ python_min }}
@@ -40,6 +43,11 @@ tests:
         - kafka.vendor
       pip_check: true
       python_version: ${{ python_min }}.*
+  - script:
+    - kafka-python --help
+    requirements:
+      run:
+        - python ${{ python_min }}.*
 
 about:
   license_file: LICENSE
